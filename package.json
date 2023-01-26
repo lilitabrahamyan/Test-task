@@ -1,0 +1,49 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "nodemon src/main.js",
+    "migration:owner:up": "node migrations/owner.js up",
+    "migration:owner:down": "node migrations/owner.js down",
+    "migration:campaignStatus:up": "node migrations/campaignStatus.js up",
+    "migration:campaignStatus:down": "node migrations/campaignStatus.js down",
+    "migration:currency:up": "node migrations/currency.js up",
+    "migration:currency:down": "node migrations/currency.js down",
+    "migration:campaign:up": "node migrations/campaign.js up",
+    "migration:campaign:down": "node migrations/campaign.js down",
+    "migration:donations:up": "node migrations/donations.js up",
+    "migration:donations:down": "node migrations/donations.js down",
+    "migration:cryptoCurrency:up": "node migrations/cryptoCurrency.js up",
+    "migration:cryptoCurrency:down": "node migrations/cryptoCurrency.js down",
+    "seeder:campaignStatus:up": "node seeders/campaignStatus.js up",
+    "seeder:campaignStatus:down": "node seeders/campaignStatus.js down",
+    "seeder:usdCurrency:up": "node seeders/usdCurrency.js up",
+    "seeder:usdCurrency:down": "node seeders/usdCurrency.js down",
+    "seeder:cryptoCurrency:up": "node seeders/cryptoCurrency.js up",
+    "seeder:cryptoCurrency:down": "node seeders/cryptoCurrency.js down",
+    "seeder:owner:up": "node seeders/owner.js up",
+    "seeder:owner:down": "node seeders/owner.js down"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.16",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@types/node-schedule": "^2.1.0",
+    "axios": "^1.2.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.3",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.0.1",
+    "node-schedule": "^2.1.1",
+    "uuid": "^9.0.0"
+  }
+}
