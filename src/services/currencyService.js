@@ -11,6 +11,17 @@ async function getByCriteria(criteria, value) {
 	}
 }
 
+async function getAll() {
+	try {
+		const res = await mySqlClient.promise().query(`SELECT * FROM Currency`);
+		console.log(res[0]);
+		return res[0];
+	} catch (err) {
+		console.log(err, 'In CurrencyService');
+	}
+}
+
 module.exports = {
-	getByCriteria
+	getByCriteria,
+	getAll
 }

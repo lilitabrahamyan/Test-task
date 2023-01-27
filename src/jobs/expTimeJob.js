@@ -7,7 +7,7 @@ const expTimeJob = scheduler.scheduleJob("*/10 * * * * *", async () => {
     if (campaigns && campaigns.length > 0) {
       for (const campaign of campaigns) {
         if (campaign.exp_date.getTime() <= new Date().getTime()) {
-          await campaignService.updateByCriteria(campaign.id, 'status', 3);
+          await campaignService.updateByCriteria(campaign.campaign_id, 'status', 3);
         }
       }
     }
