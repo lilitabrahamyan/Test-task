@@ -1,7 +1,7 @@
 const { Router } = require('express');
-const donationsController = require("../controllers/donationsController.js")
 const { body } = require("express-validator");
-const {validateRoute} = require("../core/middlewares/validator");
+const donationsController = require("../controllers/donationsController.js")
+const { validateRoute } = require("../core/middlewares/validator.js");
 
 const router = Router();
 

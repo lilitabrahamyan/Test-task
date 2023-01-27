@@ -2,7 +2,7 @@ const donationService = require("../services/donationsService.js");
 const campaignService = require("../services/campaignService.js");
 const cryptoCurrencyService = require("../services/cryptoCurrencyService.js");
 const { getCryptoCurrency } = require("../helpers/cryptoCurrencyRate.js");
-const currencyService = require("../services/cryptoCurrencyService.js");
+const currencyService = require("../services/currencyService.js");
 
 async function create (req, res) {
   try {
@@ -20,7 +20,7 @@ async function create (req, res) {
         });
       } else {
         const currencyRate = await getCryptoCurrency(currency, campaign.currency);
-        currency_id = campaign.currency_id
+        currency_id = campaign.currency_id;
         amount = currencyRate * amount;
       }
     } else {
